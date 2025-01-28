@@ -1,0 +1,62 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Add Fountain" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Rate this Fountain" class="text-xl font-bold mb-4" />
+            
+            <!-- Overall Rating -->
+            <GridLayout rows="auto, auto" columns="*" class="mb-4">
+                <Label text="Overall Rating" class="font-semibold" row="0"/>
+                <GridLayout columns="auto,auto,auto,auto,auto" row="1" class="mt-2">
+                    <Label text="{{ getOverallRatingIcon(1) }}" tap="{{ setOverallRating }}" class="text-2xl p-2 text-[#4169E1]" col="0" data-rating="1"/>
+                    <Label text="{{ getOverallRatingIcon(2) }}" tap="{{ setOverallRating }}" class="text-2xl p-2 text-[#4169E1]" col="1" data-rating="2"/>
+                    <Label text="{{ getOverallRatingIcon(3) }}" tap="{{ setOverallRating }}" class="text-2xl p-2 text-[#4169E1]" col="2" data-rating="3"/>
+                    <Label text="{{ getOverallRatingIcon(4) }}" tap="{{ setOverallRating }}" class="text-2xl p-2 text-[#4169E1]" col="3" data-rating="4"/>
+                    <Label text="{{ getOverallRatingIcon(5) }}" tap="{{ setOverallRating }}" class="text-2xl p-2 text-[#4169E1]" col="4" data-rating="5"/>
+                </GridLayout>
+            </GridLayout>
+            
+            <!-- Temperature Rating -->
+            <GridLayout rows="auto, auto" columns="*" class="mb-4">
+                <Label text="Water Temperature" class="font-semibold" row="0"/>
+                <GridLayout columns="auto,auto,auto,auto,auto" row="1" class="mt-2">
+                    <Label text="{{ getTemperatureIcon(1) }}" tap="{{ setTemperature }}" class="text-2xl p-2 text-[#4169E1]" col="0" data-rating="1"/>
+                    <Label text="{{ getTemperatureIcon(2) }}" tap="{{ setTemperature }}" class="text-2xl p-2 text-[#4169E1]" col="1" data-rating="2"/>
+                    <Label text="{{ getTemperatureIcon(3) }}" tap="{{ setTemperature }}" class="text-2xl p-2 text-[#4169E1]" col="2" data-rating="3"/>
+                    <Label text="{{ getTemperatureIcon(4) }}" tap="{{ setTemperature }}" class="text-2xl p-2 text-[#4169E1]" col="3" data-rating="4"/>
+                    <Label text="{{ getTemperatureIcon(5) }}" tap="{{ setTemperature }}" class="text-2xl p-2 text-[#4169E1]" col="4" data-rating="5"/>
+                </GridLayout>
+            </GridLayout>
+            
+            <!-- Taste Rating -->
+            <GridLayout rows="auto, auto" columns="*" class="mb-4">
+                <Label text="Taste" class="font-semibold" row="0"/>
+                <GridLayout columns="auto,auto,auto,auto,auto" row="1" class="mt-2">
+                    <Label text="{{ getTasteIcon(1) }}" tap="{{ setTaste }}" class="text-2xl p-2 text-[#4169E1]" col="0" data-rating="1"/>
+                    <Label text="{{ getTasteIcon(2) }}" tap="{{ setTaste }}" class="text-2xl p-2 text-[#4169E1]" col="1" data-rating="2"/>
+                    <Label text="{{ getTasteIcon(3) }}" tap="{{ setTaste }}" class="text-2xl p-2 text-[#4169E1]" col="2" data-rating="3"/>
+                    <Label text="{{ getTasteIcon(4) }}" tap="{{ setTaste }}" class="text-2xl p-2 text-[#4169E1]" col="3" data-rating="4"/>
+                    <Label text="{{ getTasteIcon(5) }}" tap="{{ setTaste }}" class="text-2xl p-2 text-[#4169E1]" col="4" data-rating="5"/>
+                </GridLayout>
+            </GridLayout>
+            
+            <!-- Pressure Rating -->
+            <GridLayout rows="auto, auto" columns="*" class="mb-4">
+                <Label text="Water Pressure" class="font-semibold" row="0"/>
+                <GridLayout columns="auto,auto,auto,auto,auto" row="1" class="mt-2">
+                    <Label text="{{ getPressureIcon(1) }}" tap="{{ setPressure }}" class="text-2xl p-2 text-[#4169E1]" col="0" data-rating="1"/>
+                    <Label text="{{ getPressureIcon(2) }}" tap="{{ setPressure }}" class="text-2xl p-2 text-[#4169E1]" col="1" data-rating="2"/>
+                    <Label text="{{ getPressureIcon(3) }}" tap="{{ setPressure }}" class="text-2xl p-2 text-[#4169E1]" col="2" data-rating="3"/>
+                    <Label text="{{ getPressureIcon(4) }}" tap="{{ setPressure }}" class="text-2xl p-2 text-[#4169E1]" col="3" data-rating="4"/>
+                    <Label text="{{ getPressureIcon(5) }}" tap="{{ setPressure }}" class="text-2xl p-2 text-[#4169E1]" col="4" data-rating="5"/>
+                </GridLayout>
+            </GridLayout>
+            
+            <Label text="Bottle Refiller Available" class="font-semibold" />
+            <Switch checked="{{ hasBottleRefiller }}" class="mb-4" />
+            
+            <Button text="Save Fountain" tap="{{ onSaveTap }}" class="-primary" />
+        </StackLayout>
+    </ScrollView>
+</Page>

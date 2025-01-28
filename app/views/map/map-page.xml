@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:gMaps="@nativescript/google-maps"
+      navigatingTo="navigatingTo">
+    <ActionBar title="Drinking Fountains">
+        <ActionItem tap="{{ onAddTap }}" 
+                   ios.position="right"
+                   android.position="actionBar">
+            <Label text="+" class="text-2xl" />
+        </ActionItem>
+    </ActionBar>
+
+    <GridLayout>
+        <gMaps:MapView
+            id="mapView"
+            latitude="{{ userLatitude || 0 }}"
+            longitude="{{ userLongitude || 0 }}"
+            zoom="{{ zoom }}"
+            mapReady="{{ onMapReady }}"
+            markerSelect="{{ onMarkerSelect }}"
+            showUserLocation="true"
+            padding="50" />
+    </GridLayout>
+</Page>
